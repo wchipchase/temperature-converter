@@ -1,0 +1,21 @@
+html {
+	box-sizing: border-box;
+}
+
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
+body {
+    background-color: darkgray;
+}
+
+#main-content {
+	max-width: 1200px;
+    margin: 0 auto;
+    align-content: center;
+}
+
+#output {
+    font: 32px;
+}

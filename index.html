@@ -1,25 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Temp Converter</title>
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
-    <div id="main-content">
-        <div class="tempInput">  Temperature:<br>
-            <input id="tempInput" type="text" name="tempInput"><br>
-        </div>
-        <div id="tempOutput"></div>
-        <div id="radioBtn">
-            <input type="radio" name="radio" value="radioCelsius"> C
-            <input type="radio" name="radio" value="radioFahrenheit"> F<br>
-        </div>
-        <div id="convertBtn"><button type="convertBtn">Convert</button></div>
-        <div id="clearBtn"><button type="clearBtn">Clear</button></div>
-    </div>
-    <script src="main.js"></script>
+<div id = "main-content">
+
+
+<form onsubmit="return false">
+
+    <!-- Input Field where someone can enter temp -->
+    <p>Convert</p>
+    <input type="number" placeholder="Temp to convert" id="toConvert">
+    <p>degrees</p>
+    <p id="otherScale"></p>
+    <p>to</p>
+
+
+
+    <!-- Radio button group where celsius/fahrenheit can be selected as the scale that the number should be converted to -->
+    <fieldset>
+        <input type="radio" name="typeSelector" id="F">
+        <label for="F">Fahrenheit</label>
+        <input type="radio" name="typeSelector" id="C">
+        <label for="C">Celsius</label>
+    <!-- Create a button that, when clicked, displays the converted temp -->
+    <button type="submit" id="convertBtn">Convert the Temp!</button>
+
+    <!-- Create a button that, when clicked, clears any input -->
+    <button id="clear">Clear</button>
+</form>
+
+
+<!-- Create a block level element that will hold the text of the converted temp -->
+<div id="output">
+</div>
+
+
+
+
+
+</div>
+<script src="main.js"></script>
 </body>
 </html>

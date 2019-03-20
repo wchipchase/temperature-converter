@@ -6,35 +6,28 @@
 </head>
 <body>
 <div id = "main-content">
-
-
-<form onsubmit="return false">
-
     <!-- Input Field where someone can enter temp -->
     <p>Convert</p>
-    <input type="number" placeholder="Temp to convert" id="toConvert">
+    <input type="number" placeholder="Temp to convert" id="tempInput">
     <p>degrees</p>
-    <p id="otherScale"></p>
     <p>to</p>
 
 
-
     <!-- Radio button group where celsius/fahrenheit can be selected as the scale that the number should be converted to -->
-    <fieldset>
         <input type="radio" name="typeSelector" id="F">
         <label for="F">Fahrenheit</label>
         <input type="radio" name="typeSelector" id="C">
-        <label for="C">Celsius</label>
+        <label for="C">Celsius</label><br>
     <!-- Create a button that, when clicked, displays the converted temp -->
     <button type="submit" id="convertBtn">Convert the Temp!</button>
 
     <!-- Create a button that, when clicked, clears any input -->
-    <button id="clear">Clear</button>
-</form>
+    <button id="clearBtn">Clear</button>
+
 
 
 <!-- Create a block level element that will hold the text of the converted temp -->
-<div id="output">
+<div id="tempOutput">
 </div>
 
 

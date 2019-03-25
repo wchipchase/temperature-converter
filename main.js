@@ -1,13 +1,5 @@
-// let tempInput = document.getElementById("tempInput");
-// let tempOutput = document.getElementById("tempOutput")
-// let temp = tempInput;
-
-// const printToDom = (divId, textToPrint) => {
-//     const selectedDiv = document.getElementById(divId);
-//     selectedDiv.innerHTML += textToPrint;
-// }
-
 document.getElementById("convertBtn").addEventListener("click", determineConverter);
+
 const output = document.getElementById("tempOutput");
 const clearButton = document.getElementById("clearBtn");
 const button = document.getElementById("convertBtn");
@@ -22,26 +14,26 @@ const printToDom = (divId, textToPrint) => {
 function toCelsius (temp) {
     const finalTemp = (temp - 32) * (5/9);
     output.innerHTML = finalTemp;
-    // colorOutput("c", cValue);
+    colorOutput("c", finalTemp);
 }
 
 // T(°F) = T(°C) × 9/5 + 32
 function toFahrenheit (temp) {
     const finalTemp = (temp * (9/5)) + 32;
     output.innerHTML = finalTemp;
-    // colorOutput("f", fValue);
+    colorOutput("f", finalTemp);
 }
 
 // Check output to apply coloring.
-// function colorOutput (type, value) {
-//     if ((type === "c" && value > 32) || (type === "f" && value > 90)) {
-//         output.style.color = "red";
-//     } else if ((type === "c" && value < 0) || (type === "f" && value < 32)) {
-//         output.style.color = "blue";
-//     } else {
-//         output.style.color = "green";
-//     }
-// }
+function colorOutput (type, value) {
+    if ((type === "c" && value > 32) || (type === "f" && value > 90)) {
+        document.getElementById("tempOutput").style.backgroundColor= "red";
+    } else if ((type === "c" && value < 0) || (type === "f" && value < 32)) {
+        document.getElementById("tempOutput").style.backgroundColor="blue";
+    } else {
+        document.getElementById("tempOutput").style.backgroundColor="green";
+    }
+}
 
 
 // This function should determine which conversion should
@@ -58,8 +50,6 @@ function determineConverter (clickEvent) {
 }
 
 function clear() {
-//  document.getElementById("F").checked = false;
-//  document.getElementById("C").checked = false;
  output.innerHTML = "";
  document.getElementById("tempInput").value = "";
 }
